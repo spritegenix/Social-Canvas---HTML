@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /*
 
     Nevo Template Styles
@@ -489,7 +493,6 @@ table {
 }
 
 /* Includes */
-/* Includes */
 @font-face {
   font-family: 'hk-carta';
   font-style: normal;
@@ -531,6 +534,61 @@ table {
   font-weight: 700;
   src: url(/assets/fonts/hk-carta/Gilroy-Bold.ttf) format('truetype');
 }
+
+/* @font-face {
+  font-family: 'hk-carta';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/hk-carta/HKCarta-Regular.woff2) format('woff2'),
+    url(/assets/fonts/hk-carta/HKCarta-Regular.woff) format('woff'),
+    url(/assets/fonts/hk-carta/HKCarta-Regular.eot) format('eot');
+}
+
+@font-face {
+  font-family: 'hk-nova';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/fonts/hk-nova/HKNova-Medium.woff2) format('woff2'),
+    url(/assets/fonts/hk-nova/HKNova-Medium.woff) format('woff'),
+    url(/assets/fonts/hk-nova/HKNova-Medium.eot) format('eot');
+}
+
+@font-face {
+  font-family: 'hk-grotesk';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/assets/fonts/hk-grotesk/HKGrotesk-Light.woff2) format('woff2'),
+    url(/assets/fonts/hk-grotesk/HKGrotesk-Light.woff) format('woff'),
+    url(/assets/fonts/hk-grotesk/HKGrotesk-Light.eot) format('eot');
+}
+
+@font-face {
+  font-family: 'hk-grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/hk-grotesk/HKGrotesk-Regular.woff2) format('woff2'),
+    url(/assets/fonts/hk-grotesk/HKGrotesk-Regular.woff) format('woff'),
+    url(/assets/fonts/hk-grotesk/HKGrotesk-Regular.eot) format('eot');
+}
+
+@font-face {
+  font-family: 'hk-grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/fonts/hk-grotesk/HKGrotesk-SemiBold.woff2) format('woff2'),
+    url(/assets/fonts/hk-grotesk/HKGrotesk-SemiBold.woff) format('woff'),
+    url(/assets/fonts/hk-grotesk/HKGrotesk-SemiBold.eot) format('eot');
+}
+
+@font-face {
+  font-family: 'hk-grotesk';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/hk-grotesk/HKGrotesk-Bold.woff2) format('woff2'),
+    url(/assets/fonts/hk-grotesk/HKGrotesk-Bold.woff) format('woff'),
+    url(/assets/fonts/hk-grotesk/HKGrotesk-Bold.eot) format('eot');
+} */
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -2223,6 +2281,7 @@ header.header,
     position: relative;
     white-space: nowrap;
   }
+
   .menu-link:after {
     content: '';
     display: block;
@@ -2407,7 +2466,7 @@ header.header,
   }
   .menu {
     background: white;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1.4;
     padding: 1.5rem;
     display: none;
@@ -4703,7 +4762,7 @@ form textarea {
 }
 
 .color-bg-2 {
-  background-color: #d17e71;
+  background-color: #ffebe0;
 }
 
 .light-text,
@@ -4817,4 +4876,83 @@ form textarea {
 
 .rotate70 {
   transform: rotate(70deg);
+}
+/* .caseStudy {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 0px 0px;
+  .image1 {
+    grid-row: span 1;
+  }
+  .image3 {
+    grid-row: span 0.75;
+  }
+} */
+
+@media screen and (max-width: 426px) {
+  .nevo-slider.halfscreen,
+  .nevo-slider.halfscreen .slides,
+  .nevo-slider.halfscreen .slide,
+  .nevo-slider.halfscreen .slide .container {
+    height: 100% !important;
+  }
+  .nevo-slider .slides .slide {
+    padding-bottom: 1rem;
+  }
+}
+
+header.header a.brand img {
+  max-height: 3rem !important;
+}
+.p-0 {
+  padding: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.text-md {
+  font-size: medium !important;
+}
+
+@media (min-width: 1025px) {
+  .mobileTitle {
+    font-size: large !important;
+  }
+  .mobileSub {
+    font-size: small;
+    line-height: 1.5;
+  }
+}
+
+.aboutBoxes {
+  height: 6rem;
+  background: rgb(202, 60, 86);
+  background: linear-gradient(
+    90deg,
+    rgba(202, 60, 86, 1) 0%,
+    rgba(255, 255, 255, 1) 90%
+  );
+}
+
+.boxes-para {
+  font-weight: 700;
+  font-size: 0.7rem;
+  padding: 5px;
+  width: fit-content;
+}
+
+@media (min-width: 1024px) {
+  .aboutusContainer {
+    display: flex !important;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutUs-2 {
+    padding-top: 2rem;
+  }
 }
